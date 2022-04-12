@@ -1,0 +1,27 @@
+FROM python:alpine
+
+RUN pip install --upgrade pip
+
+COPY . .
+
+# ENV DB_HOST=localhost
+
+# ENV DB_USER=demo
+
+# ENV DB_NAME=demo
+
+# ENV DB_PASS=demo
+
+# ENV DB_PORT=5432
+
+# RUN pip install -r requirements.txt
+
+# ENV PYTHONDONTWRITEBYTECODE 1
+
+# ENV PYTHONUNBUFFERED 1
+
+EXPOSE 8000
+
+CMD ["python", "manage.py", "runserver","0.0.0.0:8000"]
+
+
